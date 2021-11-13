@@ -17,8 +17,7 @@ function printIntroduction() {
 
     askQuestion();
 }
-
-const askQuestion = () => {
+function askQuestion() {
     inquirer.prompt([
         {
             type: 'list',
@@ -64,7 +63,7 @@ const askQuestion = () => {
 function displayDepartments() {
     const sql = `SELECT
                     department.id,
-                    department.name AS depertment
+                    department.name AS department
                 FROM department`
 
     db.query(sql, (err, results) => {
@@ -138,19 +137,83 @@ function addDepartment() {
         const sql = `INSERT INTO department (name)
                     VALUES ('${data.department}')`
 
-        db.query(sql, (err, results) => {
+        db.query(sql, (err) => {
             if (err) {
                 console.log(err);
                 return;
-            }
-            console.table(results);
+            };
             askQuestion();
         });
     });
 }
 
 function addRole() {
+    const sql = `Select 
+                    department.id,
+                    department.name
+                FROM department`
 
+    db.query(sql, (err, results) => {
+        let departmentArr = [];
+
+        if (err) {
+            console.log(err);
+            return;
+        }
+
+        for(let i = 0; i < results.length; i++) {
+            departmentArr.push(results[i].name)
+        }
+
+        inquirer.prompt([
+            {
+                type:'input',
+                name:'role',
+                message:'What role would you like to add?',
+                validate: input => {
+                    if (input && input.length <= 30) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            },
+            {
+                type:'input',
+                name:'salary',
+                message:'What salary would you this role have?',
+                validate: input => {
+                    if (isNaN(input)) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+            },
+            {
+                type:'list',
+                name:'department',
+                message:'What department is this role apart of?',
+                choices: departmentArr
+            }
+        ]).then(function(data) {
+            const sql2 = `SELECT * FROM department
+                                WHERE  name = '${data.department}'`
+
+            db.query(sql2, (err, results) => {
+                const sql3 = `INSERT INTO role (title, salary, department_id)
+                                VALUES ('${data.role}', '${data.salary}', '${results[0].id}')`
+
+                db.query(sql3, (err) => {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    };
+                    askQuestion();
+                });
+            })
+        })
+    });
 }
 
 function addEmployee() {
