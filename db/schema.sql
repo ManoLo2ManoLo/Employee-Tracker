@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS inventory_db;
-CREATE DATABASE inventory_db;
+DROP DATABASE IF EXISTS employees_db;
+CREATE DATABASE employees_db;
 
-USE inventory_db;
+USE employees_db;
 
 CREATE TABLE employee (
     id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
