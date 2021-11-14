@@ -14,8 +14,8 @@ function initialize () {
         ██╔████╔██║███████║██╔██╗██║███████║██║░░██╗░█████╗░░██████╔╝
         ██║╚██╔╝██║██╔══██║██║╚████║██╔══██║██║░░╚██╗██╔══╝░░██╔══██╗
         ██║░╚═╝░██║██║░░██║██║░╚███║██║░░██║╚██████╔╝███████╗██║░░██║
-        ╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝
-    `);
+        ╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝░╚═════╝░╚══════╝╚═╝░░╚═╝`);
+        
     askQuestion();
 }
 
@@ -89,7 +89,7 @@ function displayEmployees() {
 
     // mySQL Call to View Employee ID, First Name, Last Name, Role Title, Department, Salary, and Manager
     const sql = `SELECT employee.id, employee.first_name, employee.last_name, role.title,
-                        department.name AS department, role.salary, manager.first_name AND manager.last_name AS manager
+                        department.name AS department, role.salary, manager.last_name AS manager
                 FROM employee
                 JOIN role ON employee.role_id = role.id
                 JOIN department ON role.department_id = department.id
@@ -325,10 +325,8 @@ function updateEmployeeRole() {
                         });
                     });
                 });
-
             });
         });
-
     });
 }
 
