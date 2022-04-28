@@ -3,7 +3,7 @@
 ## Link(s)
 Link to Video Walkthrough: https://watch.screencastify.com/v/Yf1Sy01mlcw4bOMpfg8N
 
-## Table of Contents (Optional)
+## Table of Contents
 * [Description](#description)
 * [Clone Repository](#clone-repository)
 * [Install Dependencies](#install-dependencies)
