@@ -1,11 +1,13 @@
 # Employee-Tracker
 
-## Link Section
-Link to Github Repository: https://github.com/ManoLo2ManoLo/Employee-Tracker.git <br />
+## Link(s)
 Link to Video Walkthrough: https://watch.screencastify.com/v/Yf1Sy01mlcw4bOMpfg8N
 
 ## Table of Contents (Optional)
 * [Description](#description)
+* [Clone Repository](#clone-repository)
+* [Install Dependencies](#install-dependencies)
+* [Start Application](#start-application)
 * [Credits](#credits)
 * [License](#license)
 
@@ -26,28 +28,25 @@ If the user wants to view the employee, it would display the employees' id, firs
 
 Lastly if the user decides to update an employee's role. They choose which employee they want to update from the employee list, and then choose what role to give them from the roles list. You would be able to see the changes if you view the employee list.
 
-## Credits
-This application was typed and revised to meet challenge requirements by Manuel Canas-Menendez (ManoLo2ManoLo).
+## Clone Repository
+* git clone https://github.com/ManoLo2ManoLo/Employee-Tracker.git
+
+## Install Dependencies
+* All NPM packages required for this application are already listed as dependencies in the package.json file. Run the
+command 'npm i' command in your terminal at the root directory level to install the packages.
+* Ensure you have Node.js installed on your machine. The budget tracker application will be invoked by entering node server.js in the command line.
+
+## Start Application
+* You will see the App running on the Terminal.
+
+## Credit
+This application was typed and revised by Manuel Canas-Menendez (ManoLo2ManoLo). <br />
+
+* [Github](https://github.com/ManoLo2ManoLo)
+* [Portfolio](https://manolo2manolo.github.io/React-Portfolio/)
+* [LinkedIn](https://www.linkedin.com/in/manuel-canas-menendez-33354b21b/)
 
 ## License
-MIT License
-
-Copyright (c) 2021 Manuel Canas-Menendez
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+<p align="center">
+    <img align="center" src="https://img.shields.io/github/license/ManoLo2ManoLo/Coding-Quiz?style=for-the-badge" alt="license" />
+</p>
